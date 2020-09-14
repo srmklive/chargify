@@ -7,7 +7,7 @@ use RuntimeException;
 trait ChargifyRequest
 {
     use ChargifyHttpClient;
-//    use ChargifyAPI;
+    use ChargifyAPI;
 
     /**
      * Chargify API mode to be used.
@@ -52,10 +52,10 @@ trait ChargifyRequest
             throw new RuntimeException('Empty configuration provided. Please provide valid configuration for Chargify API.');
         }
 
-        // Setting Default PayPal Mode If not set
+        // Setting Default Chargify Mode If not set
         $this->setApiEnvironment($credentials);
 
-        // Set API configuration for the PayPal provider
+        // Set API configuration for the Chargify provider
         $this->setApiProviderConfiguration($credentials);
 
         // Set default currency.
@@ -99,7 +99,7 @@ trait ChargifyRequest
     }
 
     /**
-     * Function To Set PayPal API Configuration.
+     * Function To Set Chargify API Configuration.
      *
      * @param array $config
      *
@@ -114,7 +114,7 @@ trait ChargifyRequest
     }
 
     /**
-     * Set API environment to be used by PayPal.
+     * Set API environment to be used by Chargify.
      *
      * @param array $credentials
      *
@@ -130,7 +130,7 @@ trait ChargifyRequest
     }
 
     /**
-     * Validate & set the environment to be used by PayPal.
+     * Validate & set the environment to be used by Chargify.
      *
      * @param string $mode
      *
@@ -152,9 +152,13 @@ trait ChargifyRequest
      */
     private function setApiProviderConfiguration($credentials)
     {
-        // Setting PayPal API Credentials
+        // Setting Chargify API Credentials
         collect($credentials[$this->mode])->map(function ($value, $key) {
             $this->config[$key] = $value;
         });
+
+        $this->apiUrl = strpos($this->config['site_url'], 'chargify.com') === false ?
+            'https://' . $this->config['site_url'] . 'chargify.com' :
+            $this->config['site_url'];
     }
 }
