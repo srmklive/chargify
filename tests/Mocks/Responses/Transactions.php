@@ -49,4 +49,22 @@ trait Transactions
     }
 ]', true);
     }
+
+    /**
+     * @return array
+     */
+    protected function mockGetTransactionResponse()
+    {
+        $response = $this->mockListTransactionsResponse();
+
+        return $response[0];
+    }
+
+    /**
+     * @return array
+     */
+    protected function mockTransactionsCountResponse()
+    {
+        return ['count' => 2];
+    }
 }
