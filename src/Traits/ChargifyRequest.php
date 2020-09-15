@@ -158,7 +158,7 @@ trait ChargifyRequest
         });
 
         $this->apiUrl = strpos($this->config['site'], 'chargify.com') === false ?
-            'https://' . $this->config['site'] . 'chargify.com' :
+            'https://'.$this->config['site'].'chargify.com' :
             $this->config['site'];
 
         $this->validateSSL = $credentials['validate_ssl'];
