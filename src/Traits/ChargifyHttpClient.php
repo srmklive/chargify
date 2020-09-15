@@ -52,6 +52,13 @@ trait ChargifyHttpClient
     protected $verb = 'post';
 
     /**
+     * Validate SSL details when creating HTTP client.
+     *
+     * @var bool
+     */
+    protected $validateSSL;
+
+    /**
      * Set curl constants if not defined.
      *
      * @return void

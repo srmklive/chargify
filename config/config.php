@@ -18,5 +18,6 @@ return [
         'api_key'       => env('CHARGIFY_LIVE_API_KEY', ''),
         'site'          => env('CHARGIFY_LIVE_SITE_URL', ''),
     ],
-    'currency' => env('CHARGIFY_CURRENCY', 'USD'),
+    'currency'      => env('CHARGIFY_CURRENCY', 'USD'),
+    'validate_ssl'  => env('CHARGIFY_VALIDATE_SSL', true),
 ];

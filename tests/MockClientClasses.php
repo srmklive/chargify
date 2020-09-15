@@ -54,7 +54,8 @@ trait MockClientClasses
                 'api_key'       => 'some-api-key',
                 'site'          => 'https://acme.chargify.com',
             ],
-            'currency'       => 'USD',
+            'currency'      => 'USD',
+            'validate_ssl'  => true,
         ];
     }
 }
