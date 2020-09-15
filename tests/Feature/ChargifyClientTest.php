@@ -17,7 +17,7 @@ class ChargifyClientTest extends TestCase
     {
         parent::setUp();
 
-        $this->client = new ChargifyClient();
+        $this->client = new ChargifyClient($this->getMockApiCredentials());
     }
 
     /** @test */

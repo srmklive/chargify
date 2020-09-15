@@ -127,6 +127,11 @@ trait ChargifyHttpClient
     private function makeHttpRequest()
     {
         try {
+            $this->options['headers'] = [
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'Basic ' . base64_encode($this->config['api_key']),
+            ];
+
             return $this->client->{$this->verb}(
                 $this->apiUrl,
                 $this->options

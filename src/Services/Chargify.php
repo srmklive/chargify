@@ -25,9 +25,5 @@ class Chargify
         $this->httpBodyParam = 'form_params';
 
         $this->options = [];
-        $this->options['headers'] = [
-            'Content-Type'  => 'application/json',
-            'Authorization' => 'Basic ' . base64_encode($this->config['api_key']),
-        ];
     }
 }
