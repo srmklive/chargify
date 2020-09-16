@@ -133,7 +133,7 @@ trait ChargifyHttpClient
             ];
 
             return $this->client->{$this->verb}(
-                $this->apiUrl,
+                "{$this->apiUrl}{$this->apiEndPoint}",
                 $this->options
             )->getBody();
         } catch (HttpClientException $e) {

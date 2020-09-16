@@ -49,6 +49,15 @@ class ChargifyClientTest extends TestCase
     }
 
     /** @test */
+    public function it_throws_exception_for_invalid_request()
+    {
+        $response = $this->client->stats();
+
+        $this->assertNotEmpty($response);
+        $this->assertEquals('error', $response['type']);
+    }
+
+    /** @test */
     public function it_returns_the_client_instance_if_valid_credentials_are_provided_through_method()
     {
         $this->client->setApiCredentials($this->getMockApiCredentials());
