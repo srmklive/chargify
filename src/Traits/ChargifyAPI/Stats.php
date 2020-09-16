@@ -9,7 +9,7 @@ trait Stats
      */
     public function stats()
     {
-        $this->apiEndPoint = "/stats.json";
+        $this->apiEndPoint = '/stats.json';
 
         $this->verb = 'get';
 

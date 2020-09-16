@@ -7,7 +7,7 @@ use Srmklive\Chargify\Services\ChargifyClient;
 use Srmklive\Chargify\Tests\MockClientClasses;
 use Srmklive\Chargify\Tests\MockResponsePayloads;
 
-class StatsTest extends TestCase
+class AdjustmentsTest extends TestCase
 {
     use MockClientClasses;
     use MockResponsePayloads;
@@ -23,17 +23,17 @@ class StatsTest extends TestCase
     }
 
     /** @test */
-    public function it_can_list_stats_for_a_site()
+    public function it_can_adjust_balance_for_a_subscription()
     {
-        $expectedResponse = $this->mockStatsResponse();
+        $expectedResponse = $this->mockAdjustSubscriptionResponse();
 
         $this->client->setClient(
             $this->mock_http_client($expectedResponse)
         );
 
-        $response = $this->client->stats();
+        $response = $this->client->adjust_subscription_balance(12345678, -400, "Giving Balance");
 
         $this->assertNotEmpty($response);
-        $this->assertArrayHasKey('stats', $response);
+        $this->assertArrayHasKey('adjustment', $response);
     }
 }

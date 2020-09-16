@@ -5,7 +5,7 @@ namespace Srmklive\Chargify\Traits\ChargifyAPI;
 trait Transactions
 {
     /**
-     * List transactions for a Chargify site.
+     * List transactions for a ChargifyClient site.
      *
      * @param int    $page
      * @param int    $per_page
@@ -59,7 +59,7 @@ trait Transactions
     }
 
     /**
-     * List transactions for a Chargify site.
+     * List transactions for a ChargifyClient site.
      *
      * @return array
      */

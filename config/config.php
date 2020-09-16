@@ -1,6 +1,6 @@
 <?php
 /**
- * Chargify Settings
+ * ChargifyClient Settings
  * Created by Raza Mehdi <srmk@outlook.com>.
  */
 

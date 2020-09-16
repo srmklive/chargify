@@ -4,12 +4,12 @@ namespace Srmklive\Chargify\Services;
 
 use Srmklive\Chargify\Traits\ChargifyRequest;
 
-class Chargify
+class ChargifyClient
 {
     use ChargifyRequest;
 
     /**
-     * Chargify constructor.
+     * ChargifyClient constructor.
      *
      * @param string|array $config
      *

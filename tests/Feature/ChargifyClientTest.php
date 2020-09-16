@@ -3,14 +3,14 @@
 namespace Srmklive\Chargify\Tests\Feature;
 
 use PHPUnit\Framework\TestCase;
-use Srmklive\Chargify\Services\Chargify as ChargifyClient;
+use Srmklive\Chargify\Services\ChargifyClient;
 use Srmklive\Chargify\Tests\MockClientClasses;
 
 class ChargifyClientTest extends TestCase
 {
     use MockClientClasses;
 
-    /** @var \Srmklive\Chargify\Services\Chargify */
+    /** @var \Srmklive\Chargify\Services\ChargifyClient */
     protected $client;
 
     protected function setUp(): void

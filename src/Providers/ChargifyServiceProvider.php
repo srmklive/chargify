@@ -8,7 +8,7 @@ namespace Srmklive\Chargify\Providers;
  */
 
 use Illuminate\Support\ServiceProvider;
-use Srmklive\Chargify\Services\Chargify as ChargifyClient;
+use Srmklive\Chargify\Services\ChargifyClient;
 
 class ChargifyServiceProvider extends ServiceProvider
 {

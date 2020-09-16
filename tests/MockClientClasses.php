@@ -6,7 +6,7 @@ use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Handler\MockHandler as HttpMockHandler;
 use GuzzleHttp\HandlerStack as HttpHandlerStack;
 use GuzzleHttp\Psr7\Response as HttpResponse;
-use Srmklive\Chargify\Services\Chargify as ChargifyClient;
+use Srmklive\Chargify\Services\ChargifyClient;
 
 trait MockClientClasses
 {
