@@ -20,6 +20,6 @@ class AdjustmentsTest extends TestCase
 
         $mockClient = $this->mock_client($expectedResponse, $expectedMethod, $this->getMockApiCredentials());
 
-        $this->assertEquals($expectedResponse, $mockClient->{$expectedMethod}(12345678, -400, "Giving Balance"));
+        $this->assertEquals($expectedResponse, $mockClient->{$expectedMethod}(12345678, -400, 'Giving Balance'));
     }
 }

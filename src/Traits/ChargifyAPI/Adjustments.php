@@ -19,7 +19,7 @@ trait Adjustments
             'adjustment' => [
                 'amount' => $amount,
                 'memo'   => $memo,
-            ]
+            ],
         ];
 
         $this->apiEndPoint = "/subscriptions/{$subscription_id}/adjustments.json";

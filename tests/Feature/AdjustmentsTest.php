@@ -31,7 +31,7 @@ class AdjustmentsTest extends TestCase
             $this->mock_http_client($expectedResponse)
         );
 
-        $response = $this->client->adjust_subscription_balance(12345678, -400, "Giving Balance");
+        $response = $this->client->adjust_subscription_balance(12345678, -400, 'Giving Balance');
 
         $this->assertNotEmpty($response);
         $this->assertArrayHasKey('adjustment', $response);
