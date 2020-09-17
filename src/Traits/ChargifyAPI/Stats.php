@@ -7,7 +7,7 @@ trait Stats
     /**
      * @return array
      */
-    public function stats()
+    public function stats(): array
     {
         $this->apiEndPoint = '/stats.json';
 
