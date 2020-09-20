@@ -2,7 +2,7 @@
 
 namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
-trait ProductFamilies
+trait ProductsFamilies
 {
     /**
      * @return array

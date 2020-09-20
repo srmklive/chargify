@@ -8,7 +8,7 @@ use Srmklive\Chargify\Tests\MockClientClasses;
 use Srmklive\Chargify\Tests\MockRequestPayloads;
 use Srmklive\Chargify\Tests\MockResponsePayloads;
 
-class ProductFamiliesTest extends TestCase
+class ProductsFamiliesTest extends TestCase
 {
     use MockClientClasses;
     use MockRequestPayloads;
@@ -69,5 +69,20 @@ class ProductFamiliesTest extends TestCase
 
         $this->assertNotEmpty($response);
         $this->assertArrayHasKey('product_family', $response[0]);
+    }
+
+    /** @test */
+    public function it_can_get_products_for_a_product_family()
+    {
+        $expectedResponse = $this->mockProductsListResponse();
+
+        $this->client->setClient(
+            $this->mock_http_client($expectedResponse)
+        );
+
+        $response = $this->client->product_family_products(933860);
+
+        $this->assertNotEmpty($response);
+        $this->assertArrayHasKey('product', $response[0]);
     }
 }

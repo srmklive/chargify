@@ -2,7 +2,7 @@
 
 namespace Srmklive\Chargify\Traits\ChargifyAPI;
 
-trait ProductFamilies
+trait ProductsFamilies
 {
     /**
      * Create a product family.
@@ -48,6 +48,22 @@ trait ProductFamilies
     public function product_families_list(): array
     {
         $this->apiEndPoint = '/product_families.json';
+
+        $this->verb = 'get';
+
+        return $this->doChargifyRequest();
+    }
+
+    /**
+     * Get products list for a product family.
+     *
+     * @param int $family_id
+     *
+     * @return array
+     */
+    public function product_family_products(int $family_id): array
+    {
+        $this->apiEndPoint = "/product_families/{$family_id}/products.json";
 
         $this->verb = 'get';
 

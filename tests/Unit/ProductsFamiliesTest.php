@@ -7,7 +7,7 @@ use Srmklive\Chargify\Tests\MockClientClasses;
 use Srmklive\Chargify\Tests\MockRequestPayloads;
 use Srmklive\Chargify\Tests\MockResponsePayloads;
 
-class ProductFamiliesTest extends TestCase
+class ProductsFamiliesTest extends TestCase
 {
     use MockClientClasses;
     use MockRequestPayloads;
@@ -49,5 +49,17 @@ class ProductFamiliesTest extends TestCase
         $mockClient = $this->mock_client($expectedResponse, $expectedMethod, $this->getMockApiCredentials());
 
         $this->assertEquals($expectedResponse, $mockClient->{$expectedMethod}());
+    }
+
+    /** @test */
+    public function it_can_get_products_for_a_product_family()
+    {
+        $expectedResponse = $this->mockProductsListResponse();
+
+        $expectedMethod = 'product_family_products';
+
+        $mockClient = $this->mock_client($expectedResponse, $expectedMethod, $this->getMockApiCredentials());
+
+        $this->assertEquals($expectedResponse, $mockClient->{$expectedMethod}(933860));
     }
 }

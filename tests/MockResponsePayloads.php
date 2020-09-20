@@ -7,7 +7,8 @@ trait MockResponsePayloads
     use Mocks\Responses\Adjustments;
     use Mocks\Responses\BillingPortal;
     use Mocks\Responses\Customers;
-    use Mocks\Responses\ProductFamilies;
+    use Mocks\Responses\Products;
+    use Mocks\Responses\ProductsFamilies;
     use Mocks\Responses\Sites;
     use Mocks\Responses\Stats;
     use Mocks\Responses\Transactions;
