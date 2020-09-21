@@ -9,6 +9,7 @@ trait ChargifyAPI
     use ChargifyAPI\Customers;
     use ChargifyAPI\Products;
     use ChargifyAPI\ProductsFamilies;
+    use ChargifyAPI\ProductsPricePoints;
     use ChargifyAPI\Sites;
     use ChargifyAPI\Stats;
     use ChargifyAPI\Transactions;

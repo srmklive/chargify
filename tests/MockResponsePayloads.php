@@ -9,6 +9,7 @@ trait MockResponsePayloads
     use Mocks\Responses\Customers;
     use Mocks\Responses\Products;
     use Mocks\Responses\ProductsFamilies;
+    use Mocks\Responses\ProductsPricePoints;
     use Mocks\Responses\Sites;
     use Mocks\Responses\Stats;
     use Mocks\Responses\Transactions;
