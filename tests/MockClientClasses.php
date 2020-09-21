@@ -10,7 +10,7 @@ use Srmklive\Chargify\Services\ChargifyClient;
 
 trait MockClientClasses
 {
-    private function mock_http_client($response)
+    private function mock_http_client($response): \GuzzleHttp\Client
     {
         $mock = new HttpMockHandler([
             new HttpResponse(
@@ -25,7 +25,7 @@ trait MockClientClasses
         return new HttpClient(['handler' => $handler]);
     }
 
-    private function mock_client($expectedResponse, $expectedMethod, $expectedParams)
+    private function mock_client($expectedResponse, $expectedMethod, $expectedParams): \PHPUnit\Framework\MockObject\MockObject
     {
         $methods = [$expectedMethod];
 
@@ -41,10 +41,7 @@ trait MockClientClasses
         return $mockClient;
     }
 
-    /**
-     * @return array
-     */
-    private function getMockApiCredentials()
+    private function getMockApiCredentials(): array
     {
         return [
             'mode'    => 'sandbox',

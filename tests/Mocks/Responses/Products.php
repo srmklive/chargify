@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Products
 {
-    /**
-     * @return array
-     */
-    protected function mockProductDetailsResponse()
+    protected function mockProductDetailsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "product": {
@@ -56,10 +53,7 @@ trait Products
 }', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockProductsListResponse()
+    protected function mockProductsListResponse(): array
     {
         return \GuzzleHttp\json_decode('[
   {

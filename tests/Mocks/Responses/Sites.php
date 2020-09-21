@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Sites
 {
-    /**
-     * @return array
-     */
-    protected function mockSiteDetailsResponse()
+    protected function mockSiteDetailsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "site": {

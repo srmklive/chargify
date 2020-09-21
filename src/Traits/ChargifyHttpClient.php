@@ -63,7 +63,7 @@ trait ChargifyHttpClient
      *
      * @return void
      */
-    protected function setCurlConstants()
+    protected function setCurlConstants(): void
     {
         $constants = [
             'CURLOPT_SSLVERSION'        => 32,
@@ -86,7 +86,7 @@ trait ChargifyHttpClient
      *
      * @return void
      */
-    public function setClient($client = null)
+    public function setClient($client = null): void
     {
         if ($client instanceof HttpClient) {
             $this->client = $client;
@@ -104,7 +104,7 @@ trait ChargifyHttpClient
      *
      * @return void
      */
-    protected function setHttpClientConfiguration()
+    protected function setHttpClientConfiguration(): void
     {
         $this->setCurlConstants();
 
@@ -124,7 +124,7 @@ trait ChargifyHttpClient
      *
      * @return StreamInterface
      */
-    private function makeHttpRequest()
+    private function makeHttpRequest(): \Psr\Http\Message\StreamInterface
     {
         try {
             $this->options['headers'] = [

@@ -23,7 +23,6 @@ class ProductsTest extends TestCase
         parent::setUp();
     }
 
-
     /** @test */
     public function it_can_create_a_product()
     {

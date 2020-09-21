@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Adjustments
 {
-    /**
-     * @return array
-     */
-    protected function mockAdjustSubscriptionResponse()
+    protected function mockAdjustSubscriptionResponse(): array
     {
         return \GuzzleHttp\json_decode('{
 	"adjustment": {

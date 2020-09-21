@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Transactions
 {
-    /**
-     * @return array
-     */
-    protected function mockListTransactionsResponse()
+    protected function mockListTransactionsResponse(): array
     {
         return \GuzzleHttp\json_decode('
 [
@@ -50,20 +47,14 @@ trait Transactions
 ]', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockGetTransactionResponse()
+    protected function mockGetTransactionResponse(): array
     {
         $response = $this->mockListTransactionsResponse();
 
         return $response[0];
     }
 
-    /**
-     * @return array
-     */
-    protected function mockTransactionsCountResponse()
+    protected function mockTransactionsCountResponse(): array
     {
         return ['count' => 2];
     }

@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Requests;
 
 trait Customers
 {
-    /**
-     * @return array
-     */
-    protected function mockCustomerParams()
+    protected function mockCustomerParams(): array
     {
         return \GuzzleHttp\json_decode('{
     "first_name": "Martha",

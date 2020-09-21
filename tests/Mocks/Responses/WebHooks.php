@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait WebHooks
 {
-    /**
-     * @return array
-     */
-    protected function mockWebHooksListResponse()
+    protected function mockWebHooksListResponse(): array
     {
         return \GuzzleHttp\json_decode('[
   {
@@ -45,20 +42,14 @@ trait WebHooks
 ]', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockWebHooksReplayResponse()
+    protected function mockWebHooksReplayResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "status": "ok"
 }', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockWebHooksDetailsResponse()
+    protected function mockWebHooksDetailsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "endpoint": {
@@ -74,10 +65,7 @@ trait WebHooks
 }', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockWebHooksEndpointsResponse()
+    protected function mockWebHooksEndpointsResponse(): array
     {
         return \GuzzleHttp\json_decode('[
   {
@@ -104,10 +92,7 @@ trait WebHooks
 ]', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockWebHooksEnabledResponse()
+    protected function mockWebHooksEnabledResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "webhooks_enabled": true

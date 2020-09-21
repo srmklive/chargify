@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait BillingPortal
 {
-    /**
-     * @return array
-     */
-    protected function mockCustomerBillingPortalDetailsResponse()
+    protected function mockCustomerBillingPortalDetailsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "url": "https://www.billingportal.com/manage/19804639/1517596469/bd16498719a7d3e6",
@@ -18,10 +15,7 @@ trait BillingPortal
 }', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockRevokeCustomerBillingPortalResponse()
+    protected function mockRevokeCustomerBillingPortalResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "last_sent_at": "Not Invited",

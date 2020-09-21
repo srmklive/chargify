@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Customers
 {
-    /**
-     * @return array
-     */
-    protected function mockCustomerDetailsResponse()
+    protected function mockCustomerDetailsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
   "customer": {
@@ -37,10 +34,7 @@ trait Customers
 }', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockCustomerListResponse()
+    protected function mockCustomerListResponse(): array
     {
         return \GuzzleHttp\json_decode('[
   {
@@ -123,10 +117,7 @@ trait Customers
 ]', true);
     }
 
-    /**
-     * @return array
-     */
-    protected function mockCustomerSubscriptionsResponse()
+    protected function mockCustomerSubscriptionsResponse(): array
     {
         return \GuzzleHttp\json_decode('[
   {

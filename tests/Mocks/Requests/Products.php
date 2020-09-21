@@ -4,10 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Requests;
 
 trait Products
 {
-    /**
-     * @return array
-     */
-    protected function mockCreateProductParams()
+    protected function mockCreateProductParams(): array
     {
         return \GuzzleHttp\json_decode('{
     "name": "Gold Plan",

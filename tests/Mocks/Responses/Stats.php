@@ -4,7 +4,7 @@ namespace Srmklive\Chargify\Tests\Mocks\Responses;
 
 trait Stats
 {
-    protected function mockStatsResponse()
+    protected function mockStatsResponse(): array
     {
         return \GuzzleHttp\json_decode('{
     "seller_name": "test-site",

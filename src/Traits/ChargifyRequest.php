@@ -46,7 +46,7 @@ trait ChargifyRequest
      *
      * @return void
      */
-    public function setApiCredentials($credentials)
+    public function setApiCredentials($credentials): void
     {
         if (empty($credentials)) {
             throw new RuntimeException('Empty configuration provided. Please provide valid configuration for Chargify API.');
@@ -74,7 +74,7 @@ trait ChargifyRequest
      *
      * @return $this
      */
-    public function setCurrency($currency = 'USD')
+    public function setCurrency($currency = 'USD'): self
     {
         $allowedCurrencies = ['USD', 'GBP', 'CAD', 'AUD', 'NZD', 'SGD', 'ZAR', 'EUR', 'DKK', 'SEK', 'NOK', 'HKD', 'MYR', 'JPY', 'CHF', 'INR', 'PLN', 'CZK', 'RUB', 'BRL', 'PHP', 'RON', 'MXN', 'CNY', 'ILS', 'SAR', 'AED', 'ARS', 'CLP'];
 
@@ -93,7 +93,7 @@ trait ChargifyRequest
      *
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->currency;
     }
@@ -105,7 +105,7 @@ trait ChargifyRequest
      *
      * @throws Exception
      */
-    private function setConfig(array $config = [])
+    private function setConfig(array $config = []): void
     {
         $api_config = function_exists('config') ? config('chargify') : $config;
 
@@ -120,7 +120,7 @@ trait ChargifyRequest
      *
      * @return void
      */
-    private function setApiEnvironment($credentials)
+    private function setApiEnvironment($credentials): void
     {
         $this->mode = 'live';
 
@@ -136,7 +136,7 @@ trait ChargifyRequest
      *
      * @return void
      */
-    private function setValidApiEnvironment($mode)
+    private function setValidApiEnvironment($mode): void
     {
         $this->mode = !in_array($mode, ['sandbox', 'live']) ? 'live' : $mode;
     }
@@ -150,7 +150,7 @@ trait ChargifyRequest
      *
      * @return void
      */
-    private function setApiProviderConfiguration($credentials)
+    private function setApiProviderConfiguration($credentials): void
     {
         // Setting Chargify API Credentials
         collect($credentials[$this->mode])->map(function ($value, $key) {
